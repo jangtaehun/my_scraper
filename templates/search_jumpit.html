@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>zzangtae's Job Scrapper</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+        />
+        <style>
+            @font-face {
+                font-family: "KakaoBig regular";
+                font-style: normal;
+                font-weight: normal;
+                font-display: swap;
+                src: url(https://t1.kakaocdn.net/together_image/fonts/kakao-big-regular.woff2)
+                        format("woff2"),
+                    url(https://t1.kakaocdn.net/together_image/fonts/kakao-big-regular.woff)
+                        format("woff");
+            }
+            @font-face {
+                font-family: "KakaoBig Bold";
+                font-style: normal;
+                font-weight: bold;
+                font-display: swap;
+                src: url(https://t1.kakaocdn.net/together_image/fonts/kakao-big-bold.woff2)
+                        format("woff2"),
+                    url(https://t1.kakaocdn.net/together_image/fonts/kakao-big-bold.woff)
+                        format("woff");
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <hgroup>
+                <h1>Search Results for "{{keyword}}":</h1>
+                <a target="_blank" href="/export_jumpit?keyword={{keyword}}"
+                    >Export to file</a
+                >
+            </hgroup>
+            <table role="grid">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Comapny</th>
+                        <th>Location</th>
+                        <th>Link</th>
+                        <th>Career</th>
+                        <th>Reward</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for job in jobs %}
+                    <tr>
+                        <td>{{job.title}}</td>
+                        <td>{{job.company}}</td>
+                        <td>{{job.location}}</td>
+                        <td>
+                            <a href="{{job.link}}" target="_blank"
+                                >Apply &rarr;</a
+                            >
+                        </td>
+                        <td>{{job.career}}</td>
+                        <td>{{job.reward}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>

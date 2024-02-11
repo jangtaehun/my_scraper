@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>zzangtae's Job Scrapper</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+        />
+        <style>
+            @font-face {
+                font-family: "KakaoBig regular";
+                font-style: normal;
+                font-weight: normal;
+                font-display: swap;
+                src: url(https://t1.kakaocdn.net/together_image/fonts/kakao-big-regular.woff2)
+                        format("woff2"),
+                    url(https://t1.kakaocdn.net/together_image/fonts/kakao-big-regular.woff)
+                        format("woff");
+            }
+            @font-face {
+                font-family: "KakaoBig Bold";
+                font-style: normal;
+                font-weight: bold;
+                font-display: swap;
+                src: url(https://t1.kakaocdn.net/together_image/fonts/kakao-big-bold.woff2)
+                        format("woff2"),
+                    url(https://t1.kakaocdn.net/together_image/fonts/kakao-big-bold.woff)
+                        format("woff");
+            }
+        </style>
+    </head>
+    <body>
+        <main class="container">
+            <h1>Welcome to zzangtae's Job Scrapper</h1>
+            <h4>What do you want?</h4>
+            <form action="/search_wanted">
+                <input
+                    type="text"
+                    name="keyword"
+                    placeholder="Write one keyword please"
+                />
+                <button>Search_wanted</button>
+            </form>
+            <form action="/search_jumpit">
+                <input
+                    type="text"
+                    name="keyword"
+                    placeholder="Write one keyword please"
+                />
+                <button>Search_jumpit</button>
+            </form>
+        </main>
+    </body>
+</html>
